@@ -13,8 +13,8 @@ jobs:
         run: |
           pip install -r requirements.txt
           python train.py
-          echo "# Metrics\n" >> report.md
+          echo "# Metrics" >> report.md
           cat metrics.txt >> report.md
-          echo "# Confusion Matrix\n" >> report.md
+          echo "# Confusion Matrix" >> report.md
           cml publish confusion_matrix.png --md >> report.md
           cml send-comment report.md
